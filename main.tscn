@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://758i34k0ws7j"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_7j5on"]
+[ext_resource type="FontFile" uid="uid://clcmvkuvth021" path="res://Font/ThaleahFat.ttf" id="2_hq2sj"]
+[ext_resource type="Theme" uid="uid://c73aetgv8t85i" path="res://ThemeThingy.tres" id="2_rujxx"]
+[ext_resource type="PackedScene" uid="uid://bl785w1e426st" path="res://BG.tscn" id="2_v74ut"]
+[ext_resource type="AudioStream" uid="uid://dsllyp88yb6tq" path="res://Assets/Sound/MainMenuMusic.mp3" id="4_vwes4"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_7j5on")
+
+[node name="Options" type="VFlowContainer" parent="."]
+offset_left = 344.0
+offset_right = 810.0
+offset_bottom = 648.0
+theme = ExtResource("2_rujxx")
+alignment = 1
+
+[node name="Play_button" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hq2sj")
+theme_override_font_sizes/font_size = 91
+text = "      Play      "
+
+[node name="FullScreen_button" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hq2sj")
+theme_override_font_sizes/font_size = 91
+text = "FullScreen"
+
+[node name="Quit_button" type="Button" parent="Options"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_hq2sj")
+theme_override_font_sizes/font_size = 91
+text = "      Quit      "
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = 996.0
+offset_top = 610.0
+offset_right = 1139.0
+offset_bottom = 637.0
+theme_override_fonts/normal_font = ExtResource("2_hq2sj")
+theme_override_font_sizes/normal_font_size = 26
+text = "Dev: Loosed"
+
+[node name="BG" parent="." instance=ExtResource("2_v74ut")]
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vwes4")
+
+[connection signal="pressed" from="Options/Play_button" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Options/FullScreen_button" to="." method="_on_full_screen_button_pressed"]
+[connection signal="pressed" from="Options/Quit_button" to="." method="_on_quit_pressed"]

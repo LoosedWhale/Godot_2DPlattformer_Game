@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SVG_CharAniFull-NoWeps" data-name="SVG CharAniFull-NoWeps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 147.6 184.5">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #6a8a99;
+      }
+
+      .cls-2 {
+        fill: #84ada7;
+      }
+
+      .cls-3 {
+        fill: #4e6474;
+      }
+    </style>
+  </defs>
+  <g id="Outline">
+    <rect x="36.9" width="86.1" height="12.3"/>
+    <rect x="24.6" y="12.3" width="12.3" height="12.3"/>
+    <rect x="12.3" y="24.6" width="12.3" height="61.5"/>
+    <rect x="123" y="12.3" width="12.3" height="86.1"/>
+    <rect x="98.4" y="98.4" width="24.6" height="12.3"/>
+    <rect x="36.9" y="98.4" width="49.2" height="12.3"/>
+    <rect x="24.6" y="86.1" width="24.6" height="12.3"/>
+    <rect x="49.2" y="49.2" width="73.8" height="12.3"/>
+    <rect x="73.8" y="61.5" width="36.9" height="12.3"/>
+    <rect x="86.1" y="73.8" width="12.3" height="24.6"/>
+    <rect x="110.7" y="110.7" width="24.6" height="12.3"/>
+    <rect x="110.7" y="123" width="12.3" height="36.9"/>
+    <rect x="123" y="147.6" width="12.3" height="12.3"/>
+    <rect x="135.3" y="123" width="12.3" height="24.6"/>
+    <rect x="12.3" y="110.7" width="24.6" height="12.3"/>
+    <rect y="123" width="12.3" height="24.6"/>
+    <rect x="12.3" y="147.6" width="24.6" height="12.3"/>
+    <rect x="24.6" y="159.9" width="12.3" height="24.6"/>
+    <rect x="36.9" y="172.2" width="12.3" height="12.3"/>
+    <rect x="49.2" y="159.9" width="12.3" height="12.3"/>
+    <rect x="61.5" y="147.6" width="24.6" height="12.3"/>
+    <rect x="73.8" y="159.9" width="12.3" height="24.6"/>
+    <rect x="86.1" y="172.2" width="12.3" height="12.3"/>
+    <rect x="98.4" y="159.9" width="12.3" height="12.3"/>
+    <rect x="36.9" y="123" width="12.3" height="24.6"/>
+  </g>
+  <g id="Darkest_Gray" data-name="Darkest Gray">
+    <rect class="cls-3" x="24.6" y="24.6" width="12.3" height="36.9"/>
+    <rect class="cls-3" x="73.8" y="73.8" width="12.3" height="24.6"/>
+    <rect class="cls-3" x="36.9" y="110.7" width="49.2" height="12.3"/>
+    <rect class="cls-3" x="86.1" y="98.4" width="12.3" height="12.3"/>
+    <rect class="cls-3" x="49.2" y="123" width="12.3" height="24.6"/>
+    <rect class="cls-3" x="24.6" y="123" width="12.3" height="24.6"/>
+    <rect class="cls-3" x="36.9" y="147.6" width="12.3" height="24.6"/>
+    <rect class="cls-3" x="86.1" y="147.6" width="24.6" height="12.3"/>
+    <rect class="cls-3" x="86.1" y="159.9" width="12.3" height="12.3"/>
+    <rect class="cls-3" x="123" y="123" width="12.3" height="24.6"/>
+    <rect class="cls-3" x="36.9" y="12.3" width="86.1" height="12.3"/>
+  </g>
+  <g id="Dark_Gray" data-name="Dark Gray">
+    <rect class="cls-1" x="36.9" y="24.6" width="73.8" height="24.6"/>
+    <rect class="cls-1" x="36.9" y="49.2" width="12.3" height="36.9"/>
+    <rect class="cls-1" x="24.6" y="61.5" width="49.2" height="24.6"/>
+    <rect class="cls-1" x="49.2" y="86.1" width="24.6" height="12.3"/>
+    <rect class="cls-1" x="86.1" y="110.7" width="12.3" height="36.9"/>
+    <rect class="cls-1" x="61.5" y="135.3" width="49.2" height="12.3"/>
+    <rect class="cls-1" x="61.5" y="123" width="24.6" height="12.3"/>
+    <rect class="cls-1" x="12.3" y="123" width="12.3" height="24.6"/>
+    <rect class="cls-1" x="49.2" y="147.6" width="12.3" height="12.3"/>
+    <rect class="cls-1" x="98.4" y="73.8" width="24.6" height="24.6"/>
+  </g>
+  <g id="Ligthest_Gray" data-name="Ligthest Gray">
+    <rect class="cls-2" x="110.7" y="24.6" width="12.3" height="24.6"/>
+    <rect class="cls-2" x="110.7" y="61.5" width="12.3" height="12.3"/>
+    <rect class="cls-2" x="98.4" y="110.7" width="12.3" height="24.6"/>
+  </g>
+</svg>

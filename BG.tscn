@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://bl785w1e426st"]
+
+[ext_resource type="Texture2D" uid="uid://j1hhak8mhm7k" path="res://Assets/FreePlatformerNA/Background/CloudsBack.png" id="1_0xlfk"]
+[ext_resource type="Script" path="res://BG.gd" id="1_dnaft"]
+[ext_resource type="Texture2D" uid="uid://bv0bpo8wjsauk" path="res://Assets/FreePlatformerNA/Background/BGBack.png" id="2_wm1py"]
+[ext_resource type="Texture2D" uid="uid://ck7ukr76nnvuv" path="res://Assets/FreePlatformerNA/Background/CloudsFront.png" id="3_5oq4m"]
+[ext_resource type="Texture2D" uid="uid://cuejcld8g2dwu" path="res://Assets/FreePlatformerNA/Background/BGFront.png" id="5_1lt7m"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_dnaft")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="CloudsBack" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(576, 324)
+scale = Vector2(2.25, 2.025)
+texture = ExtResource("1_0xlfk")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1536, 0)
+
+[node name="CloudsFront" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(256, 488)
+texture = ExtResource("3_5oq4m")
+
+[node name="CloudsFront2" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(768, 488)
+texture = ExtResource("3_5oq4m")
+
+[node name="CloudsFront3" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(1280, 488)
+texture = ExtResource("3_5oq4m")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1536, 0)
+
+[node name="BgBack" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(256, 489)
+texture = ExtResource("2_wm1py")
+
+[node name="BgBack2" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(769, 489)
+texture = ExtResource("2_wm1py")
+
+[node name="BgBack3" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(1281, 488)
+texture = ExtResource("2_wm1py")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(1536, 0)
+
+[node name="BgFront" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(256, 489)
+texture = ExtResource("5_1lt7m")
+
+[node name="BgFront2" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(768, 489)
+texture = ExtResource("5_1lt7m")
+
+[node name="BgFront3" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(1280, 489)
+texture = ExtResource("5_1lt7m")

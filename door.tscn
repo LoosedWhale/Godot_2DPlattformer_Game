@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1ftsquinlpns"]
+
+[ext_resource type="Texture2D" uid="uid://2quxv3crf8p4" path="res://Assets/Castle/Dungeon_Tile_Set.png" id="1_f4ujg"]
+[ext_resource type="Script" path="res://door.gd" id="1_v4u6l"]
+[ext_resource type="AudioStream" uid="uid://bn2delkxmuej3" path="res://Assets/Sound/Door.wav" id="2_eh5q3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0h70"]
+size = Vector2(18, 31)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aglx3"]
+atlas = ExtResource("1_f4ujg")
+region = Rect2(208, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0g1ro"]
+atlas = ExtResource("1_f4ujg")
+region = Rect2(208, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahi1m"]
+atlas = ExtResource("1_f4ujg")
+region = Rect2(192, 160, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jqu5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aglx3")
+}],
+"loop": true,
+"name": &"closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g1ro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahi1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0g1ro")
+}],
+"loop": false,
+"name": &"open",
+"speed": 5.0
+}]
+
+[node name="Door" type="Area2D"]
+script = ExtResource("1_v4u6l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_w0h70")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_jqu5c")
+animation = &"open"
+speed_scale = 0.0
+
+[node name="DoorSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_eh5q3")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="DoorSfx" to="." method="_on_door_sfx_finished"]
