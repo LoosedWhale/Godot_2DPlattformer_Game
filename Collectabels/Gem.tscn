@@ -1,0 +1,87 @@
+[gd_scene load_steps=11 format=3 uid="uid://dlf1os7fwxo13"]
+
+[ext_resource type="Texture2D" uid="uid://65y18q46l2mw" path="res://Assets/Items/gem.png" id="1_jpfdm"]
+[ext_resource type="AudioStream" uid="uid://dilfj2xiq7jim" path="res://Assets/Sound/pickupCoin.wav" id="2_tjbqp"]
+
+[sub_resource type="GDScript" id="GDScript_7oq00"]
+script/source = "extends Area2D
+
+
+
+
+func _on_body_entered(body):
+	if body.name == \"Player\":
+		Game.Coins += 5 #randi_range(6,12)
+		var tween = get_tree().create_tween()
+		var tween1 = get_tree().create_tween()
+		$CollectedSfx.play()
+		tween.tween_property(self, \"position\", position - Vector2(0,25), 0.35)
+		tween1.tween_property(self, \"modulate:a\", 0, 0.3)
+		
+		tween.tween_callback(queue_free)
+		
+		
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ujku1"]
+radius = 7.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7c6ai"]
+atlas = ExtResource("1_jpfdm")
+region = Rect2(0, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv38k"]
+atlas = ExtResource("1_jpfdm")
+region = Rect2(15, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hphaq"]
+atlas = ExtResource("1_jpfdm")
+region = Rect2(30, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xd26f"]
+atlas = ExtResource("1_jpfdm")
+region = Rect2(45, 0, 15, 13)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ftr0h"]
+atlas = ExtResource("1_jpfdm")
+region = Rect2(60, 0, 15, 13)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0dqbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7c6ai")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv38k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hphaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xd26f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ftr0h")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Gem" type="Area2D"]
+script = SubResource("GDScript_7oq00")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ujku1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0dqbx")
+animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.326539
+
+[node name="CollectedSfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_tjbqp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
