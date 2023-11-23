@@ -30,7 +30,7 @@ Welcome to the Godot 2D Platformer Game repository! This project is a simple 2D 
 
 ## Controls
 
-- **Arrow keys**: Move the player character.
+- **Arrow & WASD keys**: Move the player character.
 - **Spacebar**: Jump.
 
 ## Features
